@@ -80,6 +80,8 @@ addpath(genpath('/dagher/dagher11/filip/Software/freesurfer_statsurf_display/'))
 wholebraintval((wholebrainpval(:,1)>0.05),:)=0;
 maskvals=wholebrainpval<0.05;
 
-figure(2)
-freesurfer_statsurf_scalar({wholebraintval(1:31),wholebraintval(32:62)},{maskvals(1:31),maskvals(32:62)},'dkt','UseShortLabels', false, 'MedialLateralLabels', false, 'MainTitle', 'WHR correlation with volume','ScalarName','T-value')
+figure(1)
+
+freesurfer_statsurf_scalar({wholebraintval(1:31),wholebraintval(32:62)},{maskvals(1:31),maskvals(32:62)},'dkt','NoLabels',true,'UseShortLabels', false, 'MedialLateralLabels', false, 'MainTitle', '','ScalarName','T-value')
+set(gcf,'color','w')
 saveas(gcf,'WHR_VOL.tif')

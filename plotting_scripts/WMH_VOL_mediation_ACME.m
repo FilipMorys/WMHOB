@@ -122,13 +122,15 @@ addpath(genpath('/dagher/dagher11/filip/Software/freesurfer_statsurf_display/'))
 WMHVOLmediation(:,5)=wholebraintval;
 WMHVOLmediation(:,6)=wholebrainpval;
 
-WMHVOLmediation((WMHVOLmediation(:,2)>0.05 | WMHVOLmediation(:,6)>0.05 | WMHVOLmediation(:,9)>0.05 | WMHVOLmediation(:,5)>0),:)=NaN; % Only if ACME sig / toital significant / total estimate is < 0 (negative rel. between BMI and VOL) / WMH -> VOL significant / 
+WMHVOLmediation((WMHVOLmediation(:,2)>0.05 | WMHVOLmediation(:,6)>0.05 |  WMHVOLmediation(:,5)>0),:)=NaN; % Only if ACME sig / toital significant / total estimate is < 0 (negative rel. between BMI and VOL) / WMH -> VOL significant / 
 
 maskvals=WMHVOLmediation(:,2)<0.05;
+min(WMHVOLmediation(:,1))
 
-
-freesurfer_statsurf_scalar({WMHVOLmediation(1:31,7),WMHVOLmediation(32:62,7)},{maskvals(1:31),maskvals(32:62)},'dkt','UseShortLabels', false, 'MedialLateralLabels', false, 'MainTitle', 'Proportion mediated BMI - WMH - VOL','ScalarName','Proportion mediated')
+freesurfer_statsurf_scalar({WMHVOLmediation(1:31,7),WMHVOLmediation(32:62,7)},{maskvals(1:31),maskvals(32:62)},'dkt','NoLabels', true, 'MedialLateralLabels', false, 'MainTitle', 'Proportion mediated BMI - WMH - VOL','ScalarName','Proportion mediated')
+set(gcf,'color','w')
 saveas(gcf,'BMI_WMH_VOL_proportion.tif')
+
 
 
 %figure(6)
