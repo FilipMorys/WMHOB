@@ -50,7 +50,7 @@ Dictionary=Dictionary';
 %% Get structures to plot and t-values - in the future make it automatic
 
   Structures_to_plot={'Left Thalamus' 'Left Caudate' 'Right Caudate' 'Left Putamen' 'Right Putamen' 'Left Pallidum' 'Right Pallidum' 'Left Hippocampus' 'Right Hippocampus' 'Left Amygdala' 'Right Amygdala' 'Left Accumbens' 'Right Accumbens'};
-  tvalues=[-4.64996831431916 -5.48544559593012 -4.2885112553144 -8.42325723718643 -13.2481009152121 -6.22731629334015 -6.84355692286128 -4.91419616016207 -2.64602732185067 -12.7369834596678 -12.6450149651908 -10.5391056232793 -12.3637674301652]; 
+  tvalues=[-3.92380207261434 -3.77564217343654 -2.44549602314062 -8.09761020377534 -13.59118136586 -5.85449442728931 -6.23372319085346 -5.34175509134622 -2.51632162917525 -13.771820724809 -13.9574077833106 -12.0100232458954 -13.9869821826796]; 
 
 
 %% Define structures to plot and plot them
@@ -65,8 +65,8 @@ save_nii(Image,'Subcortical_BMI.nii')
 
 %% Subcortical volumes and WHR
 
-Structures_to_plot={'Left Thalamus' 'Right Thalamus' 'Left Putamen' 'Right Putamen' 'Left Hippocampus' 'Right Hippocampus' 'Left Amygdala' 'Right Amygdala' 'Left Accumbens' 'Right Accumbens'};
-tvalues=[-2.89929570704864 2.32612896350562 -2.55238941201271 -5.65514848433553 -2.9124659126083 -2.16222728847502 -7.39508052667511 -7.4531854164793 -5.53354626786931 -6.15985044898262]; 
+Structures_to_plot={'Left Thalamus' 'Right Thalamus' 'Left Putamen' 'Right Putamen' 'Left Hippocampus' 'Left Amygdala' 'Right Amygdala' 'Left Accumbens' 'Right Accumbens'};
+tvalues=[-2.41515130820279 3.08271500450885 -2.72174616629541 -6.3340313950175 -3.26282175740355 -8.30905920431496 -8.56013154684125 -6.87093464488073 -7.62033970117674]; 
 
 %% Define structures to plot and plot them
 Image=Atlas;
