@@ -132,7 +132,7 @@ WMHVOLmediation(:,6)=wholebrainpval;
 addpath(genpath('/dagher/dagher11/filip/Software/freesurfer_statsurf_display/'))
 
 
-WMHVOLmediation((WMHVOLmediation(:,2)>0.05 | WMHVOLmediation(:,6)>0.05 |  WMHVOLmediation(:,5)>0),:)=NaN; % Only if ACME sig / toital significant / total estimate is < 0 (negative rel. between BMI and VOL) / WMH -> VOL significant / 
+WMHVOLmediation((WMHVOLmediation(:,2)>0.05 | WMHVOLmediation(:,6)>0.05 |  WMHVOLmediation(:,5)>0 | WMHVOLmediation(:,6)>0.05),:)=NaN; % Only if ACME sig / toital significant / total estimate is < 0 (negative rel. between BMI and VOL) / WMH -> VOL significant / 
 maskvals=WMHVOLmediation(:,2)<0.05;
 
 max(WMHVOLmediation(:,1))

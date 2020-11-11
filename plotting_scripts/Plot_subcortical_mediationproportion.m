@@ -49,8 +49,8 @@ Dictionary=Dictionary';
 
 %% Get structures to plot and t-values - in the future make it automatic
 
-  Structures_to_plot={'Left Amygdala' 'Right Amygdala' 'Left Accumbens'};
-  tvalues=[0.0794, 0.0758, 0.0392]; 
+  Structures_to_plot={ 'Left Amygdala' 'Right Amygdala' ,'Left Accumbens'};
+  tvalues=[0.052, 0.048, 0.022]; 
 
 
 %% Define structures to plot and plot them
@@ -65,8 +65,8 @@ save_nii(Image,'Subcortical_mediation_BMI.nii')
 
 %% Subcortical volumes and WHR
 
-Structures_to_plot={'Left Amygdala' 'Right Amygdala' 'Left Accumbens' 'Right Thalamus'};
-  tvalues=[0.1490, 0.1404, 0.0856, 0.2376]; 
+Structures_to_plot={'Left Amygdala' 'Right Amygdala' ,'Left Accumbens'};
+  tvalues=[0.076, 0.069, 0.034]; 
   
 %% Define structures to plot and plot them
 Image=Atlas;
@@ -78,10 +78,10 @@ end
 
 save_nii(Image,'Subcortical_mediation_WHR.nii')
 
-%% Subcortical volumes and VAT
-%{
-Structures_to_plot={'Right Thalamus'};
-tvalues=[3.01768353373591]; 
+%% Subcortical volumes and BFP
+
+Structures_to_plot={ 'Left Amygdala' 'Right Amygdala' ,'Left Accumbens'};
+tvalues=[0.068, 0.062, 0.033]; 
 
 %% Define structures to plot and plot them
 Image=Atlas;
@@ -91,11 +91,7 @@ for i=1:length(Structures_to_plot)
         Image.img(find(Atlas.img==find(contains(Dictionary,Structures_to_plot{i}))))=tvalues(i);
 end
 
-save_nii(Image,'Subcortical_VAT.nii')
-
-
-
-%}
+save_nii(Image,'Subcortical_mediation_BFP.nii')
 
 
 
@@ -120,3 +116,8 @@ save_nii(Image,'Subcortical_VAT.nii')
 
 
 
+
+
+
+
+, 
