@@ -50,7 +50,7 @@ Dictionary=Dictionary';
 %% Get structures to plot and t-values - in the future make it automatic
 
   Structures_to_plot={ 'Left Amygdala' 'Right Amygdala' ,'Left Accumbens'};
-  tvalues=[0.052, 0.048, 0.022]; 
+  tvalues=[0.05, 0.048, 0.024]; 
 
 
 %% Define structures to plot and plot them
@@ -66,7 +66,7 @@ save_nii(Image,'Subcortical_mediation_BMI.nii')
 %% Subcortical volumes and WHR
 
 Structures_to_plot={'Left Amygdala' 'Right Amygdala' ,'Left Accumbens'};
-  tvalues=[0.076, 0.069, 0.034]; 
+  tvalues=[0.076, 0.069, 0.036]; 
   
 %% Define structures to plot and plot them
 Image=Atlas;
@@ -81,7 +81,7 @@ save_nii(Image,'Subcortical_mediation_WHR.nii')
 %% Subcortical volumes and BFP
 
 Structures_to_plot={ 'Left Amygdala' 'Right Amygdala' ,'Left Accumbens'};
-tvalues=[0.068, 0.062, 0.033]; 
+tvalues=[0.069, 0.063, 0.034]; 
 
 %% Define structures to plot and plot them
 Image=Atlas;
